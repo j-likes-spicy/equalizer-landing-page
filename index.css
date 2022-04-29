@@ -1,0 +1,444 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Start of universally-applied properties */
+body {
+  font-size: 16px;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: minmax(4.813rem, 1fr) minmax(7.8125rem, 1fr) minmax(
+      7.8125rem,
+      1fr
+    );
+  grid-template-rows: 1fr 1.25fr 0.4fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "header header header"
+    "main main main"
+    "footer footer footer";
+  margin: 3.874375rem 10.3125rem 5.6875rem 10.3125rem;
+  overflow-wrap: break-word;
+}
+
+header {
+  grid-area: header;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+}
+
+.logo-header,
+.logo-footer {
+  width: 9.130625rem;
+  height: 2rem;
+}
+
+.main-panel {
+  background-color: #191826;
+  background-image: url("./img/bg-pattern-2.svg");
+  background-size: 17.5rem 26.25rem;
+  background-repeat: no-repeat;
+  border-radius: 0.75rem;
+}
+
+.main-panel-image {
+  background: url("./img/illustration-app.png");
+  background-size: cover;
+}
+
+.main-panel-secondary {
+  background: #fa7453;
+  border-radius: 0.75rem;
+}
+
+.main-panel-secondary-heading {
+  font-size: 2rem;
+}
+
+.main-panel-secondary-paragraph {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.main-panel-secondary-span-container {
+  display: flex;
+  align-items: center;
+}
+
+.span-left {
+  font-size: 4.0625rem;
+  font-weight: 700 bold;
+  margin-right: 1rem;
+}
+
+.span-right {
+  font-size: 1.25rem;
+}
+
+.main-panel-secondary-heading,
+.main-panel-secondary-paragraph,
+.span-left,
+.span-right {
+  color: #fcfaf9;
+}
+
+.btn-ios {
+  background: #191826;
+  color: #fcfaf9;
+}
+
+.btn {
+  border: none;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18.5rem;
+  height: 3.8125rem;
+  font-size: 1.125rem;
+  font-weight: 700 bold;
+}
+
+.btn-and {
+  background: #fcfaf9;
+  color: #191826;
+}
+
+.ios-icon,
+.and-icon {
+  margin-right: 0.495rem;
+}
+/* End of universally-applied properties */
+
+/* Media Queries */
+/* Start of desktop */
+@media only screen and (min-width: 821px) {
+  body {
+    background-image: url("./img/bg-main-desktop.png"),
+      url("./img/bg-pattern-1.svg");
+    background-size: 100.8125rem 109.875rem, 19.5rem 29.25rem;
+    background-position: top -7rem left -9.125rem, top -2.5rem left 70.5rem;
+    background-repeat: no-repeat;
+  }
+
+  .logo-header {
+    margin: 0 0 7.938rem 0;
+  }
+
+  .header-heading {
+    font-size: 5.5rem;
+    line-height: 5.5rem;
+    margin: 0 0 2.5rem 0;
+    overflow-wrap: break-word;
+    max-width: 63.438rem;
+  }
+
+  .header-paragraph {
+    max-width: 51.563rem;
+    max-height: 6.375rem;
+    font-size: 1.25rem;
+    line-height: 2.125rem;
+    margin: 0 0 20.0625rem 0;
+  }
+
+  .main-panel {
+    height: 37.5rem;
+    width: 100%;
+    background-position: top -3.5rem left 21rem;
+  }
+
+  .main-panel-image {
+    height: 40.125rem;
+    width: 19.5rem;
+    position: absolute;
+    top: 40.0625rem;
+    left: 16.25rem;
+    /* fallback top val 40.4375rem 51.125rem 15.6875rem; 59.0625rem */
+  }
+
+  .main-panel-secondary {
+    height: 39.0625rem;
+    width: 27.875rem;
+    padding: 3.625rem 3.6875rem 3rem 3.375rem;
+    position: absolute;
+    top: 59.375rem;
+    left: 45.875rem;
+  }
+
+  .main-panel-secondary-heading {
+    font-size: 2.5rem;
+    line-height: 3.25rem;
+    margin: 0 0 1.375rem 0;
+  }
+
+  .main-panel-secondary-paragraph {
+    font-size: 1.25rem;
+    line-height: 2.125rem;
+    margin: 0 0 2.4375rem 0;
+  }
+
+  .main-panel-secondary-span-container {
+    margin: 0 0 2.875rem 0;
+  }
+
+  .btn-ios {
+    margin: -1rem 0 1rem 0;
+  }
+
+  .btn:hover {
+    cursor: pointer;
+  }
+
+  .btn-ios:hover {
+    background: #66e2dc;
+  }
+
+  .btn-and:hover {
+    background: #ffb964;
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .footer-content {
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+  }
+
+  .footer-paragraph {
+    width: 22.875rem;
+    overflow-wrap: break-word;
+  }
+
+  .footer-icon {
+    margin-right: 1.25rem;
+  }
+}
+/* End of desktop */
+
+/* Start of tablet */
+@media screen and (min-width: 501px) and (max-width: 820px) {
+  body {
+    background-image: url("./img/bg-main-tablet.png"),
+      url("./img/bg-pattern-1.svg");
+    background-size: 61.4375rem 50.5rem, 16.666875rem 25rem;
+    background-position: top -7rem left -15.875rem, top -2rem left 33.5625rem;
+    background-repeat: no-repeat;
+  }
+
+  .container {
+    margin: 3.874375rem 2.0625rem 5.3125rem 2.0625rem;
+
+    /* fallback l/r 2.0625rem  */
+  }
+
+  .logo-header {
+    margin: 0 0 5.938125rem 0;
+  }
+
+  .header-heading {
+    max-width: 32.5rem;
+    max-height: 20.75rem;
+    font-size: 4rem;
+    line-height: 4rem;
+    letter-spacing: -0.045625rem;
+    margin: 0 0 1.75rem 0;
+  }
+
+  .header-paragraph {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    margin: 0 0 15.5625rem 0;
+    /* fallback 6.9375rem */
+  }
+
+  .main-panel {
+    height: 37.5rem;
+    width: 100%;
+    background-position: center top;
+  }
+
+  .main-panel-image {
+    width: 16.888125rem;
+    height: 34.75rem;
+    position: absolute;
+    top: 39.5rem;
+    left: 6.0625rem;
+  }
+
+  .main-panel-secondary {
+    height: 35.125rem;
+    width: 24.9375rem;
+    position: absolute;
+    top: 57.5rem;
+    left: 17rem;
+    padding: 3rem;
+  }
+
+  .main-panel-secondary-heading {
+    margin: 0 0 0.75rem 0;
+  }
+
+  .main-panel-secondary-paragraph {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    margin: 0 0 2.25rem 0;
+  }
+
+  .main-panel-secondary-span-container {
+    margin: 0 0 2rem 0;
+  }
+
+  .btn-ios {
+    margin: 0 0 1rem 0;
+  }
+
+  .logo-footer {
+    margin: 0 0 2.000625rem 0;
+  }
+
+  .footer-paragraph {
+    width: 22.875rem;
+    line-height: 1.625rem;
+  }
+
+  .footer-icon {
+    margin-right: 1.25rem;
+  }
+
+  .footer-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+/* End of tablet */
+
+/* Start of mobile */
+@media screen and (min-width: 375px) and (max-width: 500px) {
+  body {
+    background-image: url("./img/bg-main-mobile.png");
+    background-size: 17.5875rem 30rem;
+    background-position: top -6.5rem left 9.9375rem;
+    background-repeat: no-repeat;
+  }
+
+  header,
+  footer {
+    margin: 0 1.5rem 0 1.5rem;
+  }
+
+  .container {
+    margin: 2.499375rem 0 5rem 0;
+
+    /* fallback l/r 1.5rem */
+  }
+
+  .logo-header {
+    margin: 0 0 4.000625rem 0;
+  }
+
+  .header-heading {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    font-weight: 700;
+    letter-spacing: -0.0284090625rem;
+    margin: 0 0 1.25rem 0;
+  }
+
+  .header-paragraph {
+    line-height: 1.625rem;
+    margin: 0 0 10.375rem 0;
+  }
+
+  .main-panel {
+    height: 600px;
+    width: 100%;
+    position: relative;
+    background-position: top center;
+  }
+
+  .main-panel-secondary {
+    height: 35.125rem;
+    width: 100%;
+    padding: 2.25rem;
+    position: absolute;
+    top: 62.625rem;
+  }
+
+  .main-panel-secondary-heading {
+    margin: 0.75rem 0 0.75rem 0;
+  }
+
+  .main-panel-secondary-paragraph {
+    margin-bottom: 2.25rem;
+  }
+
+  .main-panel-image {
+    width: 13.060625rem;
+    height: 26.875rem;
+    margin: 0 0 3rem 0;
+    position: absolute;
+    top: 32.75rem;
+    left: 5.041875rem;
+  }
+
+  .main-panel-secondary-heading {
+    margin: 0.75rem 0 0.75rem 0;
+  }
+
+  .main-panel-secondary-paragraph {
+    margin-bottom: 2.25rem;
+  }
+
+  .main-panel-secondary-span-container {
+    margin: 0 0 1rem 0;
+  }
+
+  .btn-ios {
+    margin: 0 0 1rem 0;
+  }
+
+  .btn-and {
+    margin: 0 0 0.75rem 0;
+  }
+
+  footer {
+    position: absolute;
+    top: 100.75rem;
+    left: 0;
+    margin: 0 1.5rem 0 1.5rem;
+  }
+
+  .logo-footer {
+    margin: 0 0 2.000625rem 0;
+  }
+
+  .footer-paragraph {
+    line-height: 1.625rem;
+    margin-bottom: 4rem;
+  }
+
+  .footer-icon {
+    margin-right: 1.25rem;
+  }
+
+  .footer-icon-container {
+    margin-bottom: 5rem;
+  }
+}
+/* End of mobile */
